@@ -225,7 +225,7 @@ Style/NonNilCheck:
 
 # Always equire parantheses around method argument definitions.
 Style/MethodDefParentheses:
-  EnforcedStyle: require_no_parentheses_except_multiline
+  EnforcedStyle: require_parentheses
 
 # Enforce right-hand operand alignment of binary operations.
 Layout/MultilineOperationIndentation:

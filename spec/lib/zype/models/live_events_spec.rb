@@ -72,4 +72,46 @@ describe Zype::LiveEvents, :stubbed do
       client.live_events.delete(id: '340234')
     end
   end
+
+  describe '#destroy' do
+    before { stub_method(method: :put) }
+
+    it 'calls Zype::Live#start' do
+      expect_any_instance_of(Zype::LiveEvents).to receive(:start)
+      client.live_events.start(id: '340234')
+    end
+
+    it 'calls Zype::Client#put' do
+      expect_any_instance_of(Zype::Client).to receive(:put).and_call_original
+      client.live_events.start(id: '340234')
+    end
+  end
+
+  describe '#destroy' do
+    before { stub_method(method: :put) }
+
+    it 'calls Zype::Live#stop' do
+      expect_any_instance_of(Zype::LiveEvents).to receive(:stop)
+      client.live_events.stop(id: '340234')
+    end
+
+    it 'calls Zype::Client#put' do
+      expect_any_instance_of(Zype::Client).to receive(:put).and_call_original
+      client.live_events.stop(id: '340234')
+    end
+  end
+
+  describe '#archive' do
+    before { stub_method(method: :put) }
+
+    it 'calls Zype::Live#archive' do
+      expect_any_instance_of(Zype::LiveEvents).to receive(:archive)
+      client.live_events.archive(id: '340234')
+    end
+
+    it 'calls Zype::Client#put' do
+      expect_any_instance_of(Zype::Client).to receive(:put).and_call_original
+      client.live_events.archive(id: '340234')
+    end
+  end
 end
