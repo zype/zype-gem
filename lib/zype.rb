@@ -1,5 +1,4 @@
 require 'httparty'
-require 'pry'
 require 'zype/configuration'
 require 'zype/client'
 require 'zype/base_model'
