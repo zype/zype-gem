@@ -16,12 +16,12 @@ module Zype
       422 => UnprocessableEntity,
       500 => ServerError
     }.freeze
-    METHODS = %w(live_events encoders)
 
     class << self
-      METHODS.each do |method|
-        define_method method do
-          constant = method.split("_").map { |s| s.capitalize }.join("")
+      Dir["lib/zype/models/*"].each do |file|
+        model = file[/.*\/(.*?).rb$/, 1]
+        define_method model do
+          constant = model.split("_").map { |s| s.capitalize }.join("")
           Module.const_get("Zype::#{constant}").new
         end
       end

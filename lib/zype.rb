@@ -1,7 +1,7 @@
 require 'httparty'
-require 'zype/configuration'
-require 'zype/client'
-require 'zype/base_model'
+require './lib/zype/configuration.rb'
+require './lib/zype/client.rb'
+require './lib/zype/base_model.rb'
 Dir[File.join(__dir__, '../lib/zype/models', '*.rb')].each { |file| require file }
 
 module Zype
