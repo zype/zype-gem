@@ -20,7 +20,7 @@ describe Zype::LiveEvents, :stubbed do
   describe '#find' do
     before { stub_method(method: :get) }
 
-    it 'calls Zype::Live#find' do
+    it 'calls Zype::LiveEvents#find' do
       expect_any_instance_of(Zype::LiveEvents).to receive(:find)
       client.live_events.find(id: '340234')
     end
@@ -34,7 +34,7 @@ describe Zype::LiveEvents, :stubbed do
   describe '#create' do
     before { stub_method(method: :post) }
 
-    it 'calls Zype::Live#create' do
+    it 'calls Zype::LiveEvents#create' do
       expect_any_instance_of(Zype::LiveEvents).to receive(:create)
       client.live_events.create(params: {})
     end
@@ -48,7 +48,7 @@ describe Zype::LiveEvents, :stubbed do
   describe '#update' do
     before { stub_method(method: :put) }
 
-    it 'calls Zype::Live#find' do
+    it 'calls Zype::LiveEvents#find' do
       expect_any_instance_of(Zype::LiveEvents).to receive(:update)
       client.live_events.update(id: '340234', params: {})
     end
@@ -62,7 +62,7 @@ describe Zype::LiveEvents, :stubbed do
   describe '#destroy' do
     before { stub_method(method: :delete) }
 
-    it 'calls Zype::Live#destroy' do
+    it 'calls Zype::LiveEvents#destroy' do
       expect_any_instance_of(Zype::LiveEvents).to receive(:delete)
       client.live_events.delete(id: '340234')
     end
@@ -76,7 +76,7 @@ describe Zype::LiveEvents, :stubbed do
   describe '#destroy' do
     before { stub_method(method: :put) }
 
-    it 'calls Zype::Live#start' do
+    it 'calls Zype::LiveEvents#start' do
       expect_any_instance_of(Zype::LiveEvents).to receive(:start)
       client.live_events.start(id: '340234')
     end
@@ -90,7 +90,7 @@ describe Zype::LiveEvents, :stubbed do
   describe '#destroy' do
     before { stub_method(method: :put) }
 
-    it 'calls Zype::Live#stop' do
+    it 'calls Zype::LiveEvents#stop' do
       expect_any_instance_of(Zype::LiveEvents).to receive(:stop)
       client.live_events.stop(id: '340234')
     end
@@ -104,7 +104,7 @@ describe Zype::LiveEvents, :stubbed do
   describe '#archive' do
     before { stub_method(method: :put) }
 
-    it 'calls Zype::Live#archive' do
+    it 'calls Zype::LiveEvents#archive' do
       expect_any_instance_of(Zype::LiveEvents).to receive(:archive)
       client.live_events.archive(id: '340234')
     end

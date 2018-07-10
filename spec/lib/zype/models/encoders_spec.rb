@@ -20,7 +20,7 @@ describe Zype::Encoders, :stubbed do
   describe '#find' do
     before { stub_method(method: :get) }
 
-    it 'calls Zype::Encoders#all' do
+    it 'calls Zype::Encoders#find' do
       expect_any_instance_of(Zype::Encoders).to receive(:find)
       client.encoders.find(encoder_name: 'dry-fire-39402')
     end
@@ -34,7 +34,7 @@ describe Zype::Encoders, :stubbed do
   describe '#start' do
     before { stub_method(method: :post) }
 
-    it 'calls Zype::Encoders#all' do
+    it 'calls Zype::Encoders#start' do
       expect_any_instance_of(Zype::Encoders).to receive(:start)
       client.encoders.start(encoder_name: 'dry-fire-39402')
     end
