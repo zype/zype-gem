@@ -21,8 +21,7 @@ client.live_events.post(params: live_event_params)
 client.encoders.find(encoder_name: 'dry-fire-2394')
 ```
 
-TODO:
-Will need full documentation on what API endpoints are available and what methods can be used along with their arguments.
+We use YARD as our documentation tool. See examples of how to document from Zype::BaseModel. Each public facing method should include a description, what the parameters are, and what is returned. Once you have documented the code, you can run `yardoc 'lib/**/*.rb'` to generate the docs. Be sure you have the `yard` gem installed with `gem install yard`.
 
 ## Contributing
 This gem follows very simple conventions to communicate with the Zype Platform API. Each model you want to make able to access the API will needs its own class in `zype/models`. When naming methods in these models, keep the current naming convention that will make it easy for developers to understand. For example, when hitting the `index` action to get all of an object, name the method `all`. `find` can be used for finding a single object (`show` action), etc.

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.14
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'>
+<h2 id="label-Using+the+Gem">Using the Gem</h2>
+
+<p>Configure the gem to use your API credentials. If you&#39;re using Rails,
+you can create an initializer file with the following: <code>ruby
+Zype.configure do |config|   config.api_key = &lt;api_key&gt; end </code>
+For testing purposes, you can also configure the host with
+<code>config.host</code>. The default will use <code>api.zype.com</code>.</p>
+
+<p>Or, you can configure on the fly like: <code>ruby
+Zype.configuration.api_key = &lt;api_key&gt; </code></p>
+
+<p>Create a <code>Zype::Client</code> object and use it to call the API for
+whatever object you need, followed by the appropriate method. Common
+methods are <code>all, find, update, create, delete</code>.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Zype.html" title="Zype (module)">Zype</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Zype/Client.html" title="Zype::Client (class)">Client</a></span></span>
+<span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_live_events'>live_events</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
+<span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_live_events'>live_events</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='label'>params:</span> <span class='id identifier rubyid_live_event_params'>live_event_params</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_encoders'>encoders</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='label'>encoder_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dry-fire-2394</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+<p>We use YARD as our documentation tool. See examples of how to document from
+Zype::BaseModel. Each public facing method should include a description,
+what the parameters are, and what is returned. Once you have documented the
+code, you can run <code>yardoc &#39;lib/*<strong>/</strong>.rb&#39;</code>
+to generate the docs. Be sure you have the <code>yard</code> gem installed
+with <code>gem install yard</code>.</p>
+
+<h2 id="label-Contributing">Contributing</h2>
+
+<p>This gem follows very simple conventions to communicate with the Zype
+Platform API. Each model you want to make able to access the API will needs
+its own class in <code>zype/models</code>. When naming methods in these
+models, keep the current naming convention that will make it easy for
+developers to understand. For example, when hitting the <code>index</code>
+action to get all of an object, name the method <code>all</code>.
+<code>find</code> can be used for finding a single object
+(<code>show</code> action), etc.</p>
+
+<p>Each method should use <code>Zype::Client</code> to make calls to the API.
+If each model inherits from <code>Zype::BaseModel</code>, then each will
+have access to an instance of <code>Zype::Client</code>. Call
+<code>execute</code> on this instance and pass in the method
+(<code>get</code>, <code>put</code>, <code>post</code>,
+<code>delete</code>) that is going to make the request. You also need to
+pass in any necessary params.</p>
+
+<h4 id="label-Zype-3A-3AClient">Zype::Client</h4>
+
+<p>This is where the requests to the API are made. Each model should use the
+<code>execute</code> method to make the request. <code>execute</code> will
+raise an error if no API key was provided. Otherwise, it will use
+<code>HTTParty</code> to make the appropriate request, passing in any
+params. This method will then return the response or raise an error if it
+encountered one.</p>
+
+<p>If you add more models, just create them under
+<code>lib/zype/models</code>, and <code>Zype::Client</code> will get them
+automatically <code>ruby class &lt;&lt; self  
+Dir["lib/zype/models/*"].each do |file|     model = file[/.*\/(.*?).rb$/,
+1]     define_method model do       constant =
+model.split(&quot;_&quot;).map { |s| s.capitalize }.join(&quot;&quot;)     
+Module.const_get(&quot;Zype::#{constant}&quot;).new     end   end end
+</code></p>
+
+<p>The above defines methods for the classes in <code>lib/zype/models</code>,
+such as <code>live_events</code>, all they do is instantiate and instance
+of the corresponding class. Example: <code>ruby client = Zype::Client
+client.live_events # This instantiates a new class of Zype::LiveEvents. Now
+you can call all the methods on it client.live_events.all </code></p>
+
+<p>So if you create a <code>Zype::Consumers</code> model, you may need to
+reload the app and that&#39;s it.</p>
+
+<p>You can use it as: <code>ruby client = Zype::Client client.consumers.all
+</code></p>
+
+<h3 id="label-Tests">Tests</h3>
+
+<p>The gem uses Rspec for tests. The API requests are mocked so no request is
+actually made. The current tests are structured to ensure the models and
+<code>Zype::Client</code> are set up correctly to communicate with the API.
+However, the tests do not mock responses from the API as that is not
+beneficial to testing the models.</p>
+
+<h2 id="label-Push+new+versions">Push new versions</h2>
+
+<p>First, ensure you have an account on rubygems.org. You will also need push
+access, so ask permission for that as well.</p>
+
+<p>Next, ensure that the version is up to date in <code>zype.gemspec</code>.
+Use the standard version conventions of <code>major.minor.bug</code></p>
+
+<pre class="code ruby"><code class="ruby">gem build zype.gemspec
+# Spits out version built
+
+gem push zype-0.1.0.gem
+# Enter email and password in provided prompts
+</code></pre>
+</div></div>
+
+      <div id="footer">
+  Generated on Tue Jul 10 10:27:09 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.14 (ruby-2.5.0).
+</div>
+
+    </div>
+  </body>
+</html>

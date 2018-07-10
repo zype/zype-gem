@@ -17,6 +17,7 @@ module Zype
       500 => ServerError
     }.freeze
 
+    # Automatically converts all files in lib/zype/models to be used as methods
     class << self
       Dir["lib/zype/models/*"].each do |file|
         model = file[/.*\/(.*?).rb$/, 1]
