@@ -18,7 +18,7 @@ module Zype
     # Returns object matching ID
     #
     # @param id [String] the ID of the object
-    # @return [Hash] the object returrned from the API
+    # @return [Hash] the object returned from the API
     def find(id:)
       client.execute(method: :get, path: "/#{path}/#{id}")
     end
