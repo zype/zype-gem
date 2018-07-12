@@ -114,4 +114,10 @@ describe Zype::Playlists, :stubbed do
       client.playlists.remove_videos(id: '12345', video_ids: ['12345'])
     end
   end
+
+  describe '#path' do
+    it 'returns playlists' do
+      expect(client.playlists.send(:path)).to eq('playlists')
+    end
+  end
 end
