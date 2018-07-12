@@ -1,7 +1,8 @@
 lib/zype.rb f97181c8519b9032972202a1401ad2ccf7a2c96e
-lib/zype/client.rb f6282bddad944812396134840a6022a3a0c90eb1
+lib/zype/client.rb 071b222549ef625dfbd61fc1db7a70cd5d5b633a
 lib/zype/base_model.rb dd60f1fe66c84f24d9d91577df33718ff698dd0c
 lib/zype/configuration.rb 5196a104f422ebd3b81cd07afa3e743e1bfad4b4
 lib/zype/models/videos.rb da02a11be10c5a7d1cc0c1c2d5b6d3addc2b61fa
 lib/zype/models/encoders.rb 273df08086b1c9e46e0b3239e788906317dc313f
+lib/zype/models/playlists.rb 9ee14b2e2320daf68e0d5473f226bed0a90a3a28
 lib/zype/models/live_events.rb 0321dcdd09dd5e9a4731986813644e56760fd1c8
