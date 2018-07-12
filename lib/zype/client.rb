@@ -54,7 +54,7 @@ module Zype
 
       resp = self.send(method, path: path, params: params)
       if resp.success?
-        resp['response']
+        resp['response'].nil? ? resp.parsed_response : resp['response']
       else
         error!(code: resp.code, message: resp['message'])
       end
