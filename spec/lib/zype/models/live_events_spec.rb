@@ -73,7 +73,7 @@ describe Zype::LiveEvents, :stubbed do
     end
   end
 
-  describe '#destroy' do
+  describe '#start' do
     before { stub_method(method: :put) }
 
     it 'calls Zype::LiveEvents#start' do
@@ -87,7 +87,7 @@ describe Zype::LiveEvents, :stubbed do
     end
   end
 
-  describe '#destroy' do
+  describe '#stop' do
     before { stub_method(method: :put) }
 
     it 'calls Zype::LiveEvents#stop' do
@@ -112,6 +112,12 @@ describe Zype::LiveEvents, :stubbed do
     it 'calls Zype::Client#put' do
       expect_any_instance_of(Zype::Client).to receive(:put).and_call_original
       client.live_events.archive(id: '340234')
+    end
+  end
+
+  describe '#path' do
+    it 'returns live_events' do
+      expect(client.live_events.send(:path)).to eq('live_events')
     end
   end
 end

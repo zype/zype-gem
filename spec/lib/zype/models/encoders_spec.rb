@@ -58,4 +58,10 @@ describe Zype::Encoders, :stubbed do
       client.encoders.stop(encoder_name: 'dry-fire-39402')
     end
   end
+
+  describe '#path' do
+    it 'returns live/encoders' do
+      expect(client.encoders.send(:path)).to eq('live/encoders')
+    end
+  end
 end
