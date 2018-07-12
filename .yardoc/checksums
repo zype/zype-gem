@@ -5,4 +5,5 @@ lib/zype/configuration.rb 5196a104f422ebd3b81cd07afa3e743e1bfad4b4
 lib/zype/models/videos.rb da02a11be10c5a7d1cc0c1c2d5b6d3addc2b61fa
 lib/zype/models/encoders.rb 273df08086b1c9e46e0b3239e788906317dc313f
 lib/zype/models/playlists.rb 9ee14b2e2320daf68e0d5473f226bed0a90a3a28
+lib/zype/models/categories.rb 16291a2e567c7dbcaf9d6150b5b47d5c764b826f
 lib/zype/models/live_events.rb 0321dcdd09dd5e9a4731986813644e56760fd1c8
