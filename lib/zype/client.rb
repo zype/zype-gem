@@ -28,8 +28,8 @@ module Zype
       end
     end
 
-    def initialize
-      @headers = { "Content-Type" => "application/json", "x-zype-key" => Zype.configuration.api_key }
+    def initialize(auth_method='api_key')
+      @headers = { "Content-Type" => "application/json" }.merge(authentication(auth_method))
       self.class.base_uri Zype.configuration.host
     end
 
@@ -50,7 +50,9 @@ module Zype
     end
 
     def execute(method:, path:, params: {})
-      raise NoApiKey if Zype.configuration.api_key.to_s.empty?
+      if Zype.configuration.api_key.to_s.empty?
+        raise NoApiKey if Zype.configuration.app_key.to_s.empty?
+      end
 
       resp = self.send(method, path: path, params: params)
       if resp.success?
@@ -65,6 +67,14 @@ module Zype
     def error!(code:, message:)
       error_type = ERROR_TYPES[code] || GenericError
       raise error_type.new(message)
+    end
+
+    def authentication(auth_method)
+      if auth_method.to_sym == :api_key
+        { 'x-zype-key' => Zype.configuration.api_key }
+      else
+        { 'x-zype-app-key' => Zype.configuration.app_key }
+      end
     end
   end
 end

@@ -1,9 +1,11 @@
 module Zype
   class BaseModel
     attr_reader :client, :path
+    ACCEPTED_KEYS = %i(api_key app_key)
+    class InvalidKey < StandardError; end
 
-    def initialize
-      @client = Client.new
+    def initialize(auth_method='api_key')
+      @client = Client.new(auth_method)
       @path = generate_path
     end
 
@@ -46,6 +48,15 @@ module Zype
     # @return [Hash] the deleted object
     def delete(id:)
       client.execute(method: :delete, path: "/#{path}/#{id}")
+    end
+
+    # Sets the authentication method for calling the API
+    #
+    # @param auth_method [String] one of 'api_key' or 'app_key'
+    def auth=(auth_method)
+      raise InvalidKey unless ACCEPTED_KEYS.include?(auth_method.to_sym)
+
+      @client = Client.new(auth_method)
     end
 
     private
