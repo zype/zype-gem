@@ -12,13 +12,27 @@ Or, you can configure on the fly like:
 Zype.configuration.api_key = <api_key>
 ```
 
-Create a `Zype::Client` object and use it to call the API for whatever object you need, followed by the appropriate method. Common methods are `all, find, update, create, delete`.
+Create a `Zype::Client` object and use it to call the API for whatever object you need, followed by the appropriate method. Common methods are `all, find, update, create, delete`. You can find what methods are available for each class [in the documentation](http://dev.zype.com/zype-gem/doc/).
 
 ```ruby
 client = Zype::Client
 client.live_events.all
 client.live_events.post(params: live_event_params)
 client.encoders.find(encoder_name: 'dry-fire-2394')
+
+# Can also use classes as follows
+videos = Zype::Videos.new
+videos.all
+videos.post(params: video_params)
+
+# Gem will default to use api_key to authenticate
+# to authenticate with the app_key instead
+videos = Zype::Videos.new('app_key')
+# or, if videos instance is already set
+videos = Zype::Videos.new
+videos.auth = 'app_key'
+# and to change it back to api_key
+videos.auth = 'api_key'
 ```
 
 We use YARD as our documentation tool. See examples of how to document from Zype::BaseModel. Each public facing method should include a description, what the parameters are, and what is returned. Once you have documented the code, you can run `yardoc 'lib/**/*.rb'` to generate the docs. Be sure you have the `yard` gem installed with `gem install yard`.

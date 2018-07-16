@@ -12,8 +12,12 @@ describe Zype::Client do
   end
 
   describe '#execute', :stubbed do
-    context 'when no API key is set' do
-      before { Zype.configuration.api_key = nil }
+    context 'when no API or app key is set' do
+      before do
+        Zype.configuration.api_key = nil
+        Zype.configuration.app_key = nil
+      end
+
       it 'raises a NoApiKey error' do
         expect {
           client.new.execute(method: :get, path: '/live_events')

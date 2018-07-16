@@ -71,12 +71,28 @@ Zype.configuration.api_key = &lt;api_key&gt; </code></p>
 
 <p>Create a <code>Zype::Client</code> object and use it to call the API for
 whatever object you need, followed by the appropriate method. Common
-methods are <code>all, find, update, create, delete</code>.</p>
+methods are <code>all, find, update, create, delete</code>. You can find
+what methods are available for each class <a
+href="http://dev.zype.com/zype-gem/doc/">in the documentation</a>.</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Zype.html" title="Zype (module)">Zype</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Zype/Client.html" title="Zype::Client (class)">Client</a></span></span>
 <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_live_events'>live_events</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
 <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_live_events'>live_events</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='label'>params:</span> <span class='id identifier rubyid_live_event_params'>live_event_params</span><span class='rparen'>)</span>
 <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_encoders'>encoders</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='label'>encoder_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dry-fire-2394</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+<span class='comment'># Can also use classes as follows
+</span><span class='id identifier rubyid_videos'>videos</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Zype.html" title="Zype (module)">Zype</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Zype/Videos.html" title="Zype::Videos (class)">Videos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Zype/BaseModel.html#initialize-instance_method" title="Zype::BaseModel#initialize (method)">new</a></span></span>
+<span class='id identifier rubyid_videos'>videos</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
+<span class='id identifier rubyid_videos'>videos</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='label'>params:</span> <span class='id identifier rubyid_video_params'>video_params</span><span class='rparen'>)</span>
+
+<span class='comment'># Gem will default to use api_key to authenticate
+</span><span class='comment'># to authenticate with the app_key instead
+</span><span class='id identifier rubyid_videos'>videos</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Zype.html" title="Zype (module)">Zype</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Zype/Videos.html" title="Zype::Videos (class)">Videos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Zype/BaseModel.html#initialize-instance_method" title="Zype::BaseModel#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>app_key</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='comment'># or, if videos instance is already set
+</span><span class='id identifier rubyid_videos'>videos</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Zype.html" title="Zype (module)">Zype</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Zype/Videos.html" title="Zype::Videos (class)">Videos</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Zype/BaseModel.html#initialize-instance_method" title="Zype::BaseModel#initialize (method)">new</a></span></span>
+<span class='id identifier rubyid_videos'>videos</span><span class='period'>.</span><span class='id identifier rubyid_auth'>auth</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>app_key</span><span class='tstring_end'>&#39;</span></span>
+<span class='comment'># and to change it back to api_key
+</span><span class='id identifier rubyid_videos'>videos</span><span class='period'>.</span><span class='id identifier rubyid_auth'>auth</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>api_key</span><span class='tstring_end'>&#39;</span></span>
 </code></pre>
 
 <p>We use YARD as our documentation tool. See examples of how to document from
@@ -160,7 +176,7 @@ gem push zype-0.1.0.gem
 </div></div>
 
       <div id="footer">
-  Generated on Thu Jul 12 18:53:29 2018 by
+  Generated on Mon Jul 16 11:37:51 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.14 (ruby-2.5.0).
 </div>
