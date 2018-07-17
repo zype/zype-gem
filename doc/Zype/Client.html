@@ -110,7 +110,7 @@
     
   
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Client/GenericError.html" title="Zype::Client::GenericError (class)">GenericError</a></span>, <span class='object_link'><a href="Client/NoApiKey.html" title="Zype::Client::NoApiKey (class)">NoApiKey</a></span>, <span class='object_link'><a href="Client/NotFound.html" title="Zype::Client::NotFound (class)">NotFound</a></span>, <span class='object_link'><a href="Client/ServerError.html" title="Zype::Client::ServerError (class)">ServerError</a></span>, <span class='object_link'><a href="Client/Unauthorized.html" title="Zype::Client::Unauthorized (class)">Unauthorized</a></span>, <span class='object_link'><a href="Client/UnprocessableEntity.html" title="Zype::Client::UnprocessableEntity (class)">UnprocessableEntity</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Client/GenericError.html" title="Zype::Client::GenericError (class)">GenericError</a></span>, <span class='object_link'><a href="Client/NoApiKey.html" title="Zype::Client::NoApiKey (class)">NoApiKey</a></span>, <span class='object_link'><a href="Client/NoAppKey.html" title="Zype::Client::NoAppKey (class)">NoAppKey</a></span>, <span class='object_link'><a href="Client/NotFound.html" title="Zype::Client::NotFound (class)">NotFound</a></span>, <span class='object_link'><a href="Client/ServerError.html" title="Zype::Client::ServerError (class)">ServerError</a></span>, <span class='object_link'><a href="Client/Unauthorized.html" title="Zype::Client::Unauthorized (class)">Unauthorized</a></span>, <span class='object_link'><a href="Client/UnprocessableEntity.html" title="Zype::Client::UnprocessableEntity (class)">UnprocessableEntity</a></span>
     
   
 </p>
@@ -353,13 +353,13 @@
       <pre class="lines">
 
 
-31
 32
 33
-34</pre>
+34
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/zype/client.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'lib/zype/client.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_auth_method'>auth_method</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>api_key</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='ivar'>@headers</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Content-Type</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>application/json</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_authentication'>authentication</span><span class='lparen'>(</span><span class='id identifier rubyid_auth_method'>auth_method</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -440,12 +440,12 @@
       <pre class="lines">
 
 
-48
 49
-50</pre>
+50
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/zype/client.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/zype/client.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='label'>path:</span><span class='comma'>,</span> <span class='label'>params:</span> <span class='id identifier rubyid__'>_</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>headers:</span> <span class='id identifier rubyid_headers'>headers</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -470,7 +470,6 @@
       <pre class="lines">
 
 
-52
 53
 54
 55
@@ -481,10 +480,11 @@
 60
 61
 62
-63</pre>
+63
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/zype/client.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/zype/client.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span><span class='comma'>,</span> <span class='label'>path:</span><span class='comma'>,</span> <span class='label'>params:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="../Zype.html" title="Zype (module)">Zype</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configuration'><span class='object_link'><a href="../Zype.html#configuration-class_method" title="Zype.configuration (method)">configuration</a></span></span><span class='period'>.</span><span class='id identifier rubyid_api_key'>api_key</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -518,12 +518,12 @@
       <pre class="lines">
 
 
-36
 37
-38</pre>
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/zype/client.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/zype/client.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='label'>path:</span><span class='comma'>,</span> <span class='label'>params:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>query:</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='label'>headers:</span> <span class='id identifier rubyid_headers'>headers</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -548,12 +548,12 @@
       <pre class="lines">
 
 
-40
 41
-42</pre>
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/zype/client.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'lib/zype/client.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='label'>path:</span><span class='comma'>,</span> <span class='label'>params:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>query:</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='label'>headers:</span> <span class='id identifier rubyid_headers'>headers</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -578,12 +578,12 @@
       <pre class="lines">
 
 
-44
 45
-46</pre>
+46
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/zype/client.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/zype/client.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='label'>path:</span><span class='comma'>,</span> <span class='label'>params:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>query:</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='label'>headers:</span> <span class='id identifier rubyid_headers'>headers</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -598,7 +598,7 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Jul 16 11:37:52 2018 by
+  Generated on Tue Jul 17 11:38:23 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.14 (ruby-2.5.0).
 </div>
