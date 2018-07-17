@@ -1,4 +1,5 @@
 module Zype
+  # @since 0.1.0
   class Encoders < Zype::BaseModel
     # Returns encoder matching the encoder_name
     #

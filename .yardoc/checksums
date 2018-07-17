@@ -1,9 +1,10 @@
 lib/zype.rb f97181c8519b9032972202a1401ad2ccf7a2c96e
-lib/zype/client.rb 5f88bd3fb40536b9ec8fcd8fec871e6fa31ae795
+lib/zype/client.rb 4d1f7aac43bc78fae522041702b3dc38fe7a6ec5
 lib/zype/base_model.rb 0a9b99a5207a30be4575b2d276a91e95dedf2a72
+lib/zype/models/apps.rb 27d163e14b9cff7d19e195f4410c2648b7d89429
 lib/zype/configuration.rb bcc150dd46729d6021ded90f3b69a3cee7b89454
-lib/zype/models/videos.rb da02a11be10c5a7d1cc0c1c2d5b6d3addc2b61fa
-lib/zype/models/encoders.rb 273df08086b1c9e46e0b3239e788906317dc313f
-lib/zype/models/playlists.rb 9ee14b2e2320daf68e0d5473f226bed0a90a3a28
-lib/zype/models/categories.rb 3110149f3c2d3a0aa9e3380c438709723f26c706
-lib/zype/models/live_events.rb 0321dcdd09dd5e9a4731986813644e56760fd1c8
+lib/zype/models/videos.rb e5785fe9eb524a19ab20491f4d3a0aee922acc62
+lib/zype/models/encoders.rb df960d828f97afd5722e36c4ce52797bb1e7a975
+lib/zype/models/playlists.rb 871abb3cf9020fa50114b8932cc67d01813ff5f2
+lib/zype/models/categories.rb 685af0b79c5e687c908bf43fdd1331c6e9f56ee7
+lib/zype/models/live_events.rb c29c1947cda696eb762a042bbd3c6327b0f638cb
