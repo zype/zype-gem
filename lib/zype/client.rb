@@ -3,6 +3,7 @@ module Zype
     attr_reader :headers
     include HTTParty
     class NoApiKey < StandardError; end
+    class NoAppKey < StandardError; end
     class NotFound < StandardError; end
     class ServerError < StandardError; end
     class Unauthorized < StandardError; end

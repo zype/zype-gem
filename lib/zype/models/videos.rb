@@ -1,4 +1,5 @@
 module Zype
+  # @since 0.4.0
   class Videos < Zype::BaseModel
     # Adds zobjects to video
     #
