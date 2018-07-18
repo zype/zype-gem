@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'zype'
-  s.version = '0.6.0'
+  s.version = '0.7.0'
   s.date = '2018-06-07'
   s.summary = 'Zype Platform Gem'
   s.description = 'Ruby library to interact with the Zype Platform API'
