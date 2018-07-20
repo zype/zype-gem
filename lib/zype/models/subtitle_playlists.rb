@@ -1,7 +1,8 @@
 module Zype
   # The Subtitle Playlists API allows users to integrate subtitles with HLS manifests from a Zype video source.
   # It’s a simple way to add subtitles which will be supported in all platforms that implement the Apple HLS specification.
-  # This class does not support all, find and update methods
+  # This class does not support all, find and update methods.
+  # Read more at https://docs.zype.com/v1.0/reference#subtitle-playlists
   #
   # @since 0.7.0
   class SubtitlePlaylists < Zype::BaseModel

@@ -1,5 +1,6 @@
 module Zype
-  # Work with subtitles for a specific video
+  # Work with subtitles for a specific video.
+  # Read more at https://docs.zype.com/v1.0/reference#subtitles
   #
   # @since 0.7.0
   class Subtitles < Zype::BaseModel

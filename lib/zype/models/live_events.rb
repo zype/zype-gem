@@ -1,4 +1,6 @@
 module Zype
+  # Read more at https://docs.zype.com/v1.0/reference#live-events
+  #
   # @since 0.1.0
   class LiveEvents < Zype::BaseModel
     # Starts broadcasting a live event
