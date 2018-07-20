@@ -107,7 +107,9 @@
 <p>The Subtitle Playlists API allows users to integrate subtitles with HLS
 manifests from a Zype video source. It’s a simple way to add subtitles
 which will be supported in all platforms that implement the Apple HLS
-specification. This class does not support all, find and update methods</p>
+specification. This class does not support all, find and update methods.
+Read more at <a
+href="https://docs.zype.com/v1.0/reference#subtitle-playlists">docs.zype.com/v1.0/reference#subtitle-playlists</a></p>
 
 
   </div>
@@ -328,12 +330,12 @@ with a URL</p>
       <pre class="lines">
 
 
-20
 21
-22</pre>
+22
+23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/zype/models/subtitle_playlists.rb', line 20</span>
+      <pre class="code"><span class="info file"># File 'lib/zype/models/subtitle_playlists.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='label'>video_id:</span><span class='comma'>,</span> <span class='label'>params:</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:post</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/videos/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_video_id'>video_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/subtitle_playlists</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>params:</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
@@ -439,12 +441,12 @@ with a URL</p>
       <pre class="lines">
 
 
-29
 30
-31</pre>
+31
+32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/zype/models/subtitle_playlists.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'lib/zype/models/subtitle_playlists.rb', line 30</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='label'>language:</span><span class='comma'>,</span> <span class='label'>video_id:</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:delete</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/videos/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_video_id'>video_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/subtitle_playlists/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -459,7 +461,7 @@ with a URL</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Jul 18 10:33:57 2018 by
+  Generated on Fri Jul 20 12:01:55 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.14 (ruby-2.5.0).
 </div>

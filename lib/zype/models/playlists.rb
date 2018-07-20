@@ -1,4 +1,6 @@
 module Zype
+  # Read more at https://docs.zype.com/v1.0/reference#playlists
+  # 
   # @since 0.4.0
   class Playlists < Zype::BaseModel
     # Returns videos for a playlist

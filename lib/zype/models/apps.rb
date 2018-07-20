@@ -1,6 +1,6 @@
 module Zype
-  # This class does not support all, create, update or delete methods
-  # since the API does not support them
+  # This class does not support all, create, update or delete methods.
+  # Read more at https://docs.zype.com/v1.0/reference#apps
   #
   # @since 0.6.0
   class Apps < Zype::BaseModel
