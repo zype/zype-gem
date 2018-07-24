@@ -5,7 +5,7 @@ module Zype
     class InvalidKey < StandardError; end
 
     def initialize(auth_method='api_key')
-      @client = Client.new(auth_method)
+      @client = client_class.new(auth_method)
       @path = generate_path
     end
 
@@ -56,7 +56,7 @@ module Zype
     def auth=(auth_method)
       raise InvalidKey unless ACCEPTED_KEYS.include?(auth_method.to_sym)
 
-      @client = Client.new(auth_method)
+      @client = client_class.new(auth_method)
     end
 
     private
@@ -64,6 +64,10 @@ module Zype
     def generate_path
       split = self.class.name.split(/(?=[A-Z])/)
       split[1..split.length].join('_').downcase
+    end
+
+    def client_class
+      Zype::ApiClient
     end
   end
 end
