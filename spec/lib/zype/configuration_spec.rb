@@ -7,7 +7,7 @@ describe Zype::Configuration do
   end
 
   it 'initializes with api.zype.com for host' do
-    expect(configuration.host).to eq('api.zype.com')
+    expect(configuration.host).to eq('https://api.zype.com')
   end
 
   context 'When setting the api_key' do
@@ -18,9 +18,9 @@ describe Zype::Configuration do
   end
 
   context 'when setting the host' do
-    before { Zype.configuration.host = "api.dev.zype.com"}
+    before { Zype.configuration.host = "http://api.dev.zype.com"}
     it 'keeps the value it was set to' do
-      expect(Zype.configuration.host).to eq("api.dev.zype.com")
+      expect(Zype.configuration.host).to eq("http://api.dev.zype.com")
     end
   end
 end

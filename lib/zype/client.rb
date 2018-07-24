@@ -29,11 +29,6 @@ module Zype
       end
     end
 
-    def initialize(auth_method='api_key')
-      @headers = { "Content-Type" => "application/json" }.merge(authentication(auth_method))
-      self.class.base_uri Zype.configuration.host
-    end
-
     def get(path:, params: {})
       self.class.get(path, { query: params, headers: headers })
     end
