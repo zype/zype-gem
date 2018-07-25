@@ -3,8 +3,10 @@ lib/zype/client.rb 73d919ba340a5e776016bb88cfcbfdabc29f37bc
 lib/zype/base_model.rb 5dfdb9de0ce869890245893d374994f33d8eae57
 lib/zype/models/apps.rb c0b30fb9df9354070045879155b08741253a2500
 lib/zype/configuration.rb ca1ff9ab04cb478d2307bae96e627ffb9a0586ce
+lib/zype/models/geo_ip.rb e1008c53eac8dd247415d2190c5d1bc5d8c61526
 lib/zype/models/videos.rb 75c6eb97b0e310e7c4c5dfeda457786314e64189
 lib/zype/models/devices.rb 298d865dc315857ab621571d99a055189908ef72
+lib/zype/models/players.rb e5dddcd52aaca69d7998e8c018389d17cf014f0e
 lib/zype/models/encoders.rb 9528158f691e740bfddac7d2b8df8da289a9d811
 lib/zype/models/manifests.rb dd6c5f070c5eab33c1d82714db368491e5422516
 lib/zype/models/playlists.rb c9fd35abc44785ce0a207c4ea6598098e42265a8

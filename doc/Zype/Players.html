@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: Zype::Manifests
+  Class: Zype::Players
   
     &mdash; Documentation by YARD 0.9.14
   
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  pathId = "Zype::Manifests";
+  pathId = "Zype::Players";
   relpath = '../';
 </script>
 
@@ -36,10 +36,10 @@
       <div id="header">
         <div id="menu">
   
-    <a href="../_index.html">Index (M)</a> &raquo;
+    <a href="../_index.html">Index (P)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Zype.html" title="Zype (module)">Zype</a></span></span>
      &raquo; 
-    <span class="title">Manifests</span>
+    <span class="title">Players</span>
   
 </div>
 
@@ -59,7 +59,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Class: Zype::Manifests
+      <div id="content"><h1>Class: Zype::Players
   
   
   
@@ -76,7 +76,7 @@
           
             <li class="next"><span class='object_link'><a href="BaseModel.html" title="Zype::BaseModel (class)">BaseModel</a></span></li>
           
-            <li class="next">Zype::Manifests</li>
+            <li class="next">Zype::Players</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/zype/models/manifests.rb</dd>
+    <dd>lib/zype/models/players.rb</dd>
   </dl>
   
 </div>
@@ -104,9 +104,9 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>This class does not support all, create, update or delete. To use this
-class, you must set Zype.configuration.player_host. Read more at <a
-href="https://docs.zype.com/v1.0/reference#vod-manifests">docs.zype.com/v1.0/reference#vod-manifests</a></p>
+<p>This class does not support all, create, update or delete methods. Read
+more at <a
+href="https://docs.zype.com/v1.0/reference#players">docs.zype.com/v1.0/reference#players</a></p>
 
 
   </div>
@@ -123,7 +123,7 @@ href="https://docs.zype.com/v1.0/reference#vod-manifests">docs.zype.com/v1.0/ref
       
         
         <div class='inline'>
-<p>0.9.0</p>
+<p>0.10.0</p>
 </div>
       
     </li>
@@ -159,7 +159,7 @@ href="https://docs.zype.com/v1.0/reference#vod-manifests">docs.zype.com/v1.0/ref
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#find-instance_method" title="#find (instance method)">#<strong>find</strong>(id:)  &#x21d2; String </a>
+      <a href="#find-instance_method" title="#find (instance method)">#<strong>find</strong>(id:, format:)  &#x21d2; Hash|String </a>
     
 
     
@@ -174,7 +174,7 @@ href="https://docs.zype.com/v1.0/reference#vod-manifests">docs.zype.com/v1.0/ref
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns contents of the manifest file.</p>
+<p>Retrieve formatted player responses.</p>
 </div></span>
   
 </li>
@@ -209,7 +209,7 @@ href="https://docs.zype.com/v1.0/reference#vod-manifests">docs.zype.com/v1.0/ref
       <div class="method_details first">
   <h3 class="signature first" id="find-instance_method">
   
-    #<strong>find</strong>(id:)  &#x21d2; <tt>String</tt> 
+    #<strong>find</strong>(id:, format:)  &#x21d2; <tt>Hash|String</tt> 
   
 
   
@@ -218,7 +218,7 @@ href="https://docs.zype.com/v1.0/reference#vod-manifests">docs.zype.com/v1.0/ref
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns contents of the manifest file.</p>
+<p>Retrieve formatted player responses</p>
 
 
   </div>
@@ -238,7 +238,23 @@ href="https://docs.zype.com/v1.0/reference#vod-manifests">docs.zype.com/v1.0/ref
       
         &mdash;
         <div class='inline'>
-<p>the ID of the video</p>
+<p>ID of the video</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>format</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>format to return the response in. Valid options are html, js, json</p>
 </div>
       
     </li>
@@ -251,14 +267,9 @@ href="https://docs.zype.com/v1.0/reference#vod-manifests">docs.zype.com/v1.0/ref
     <li>
       
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt>Hash|String</tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>contents of the m3u8 manifest file</p>
-</div>
       
     </li>
   
@@ -273,7 +284,7 @@ href="https://docs.zype.com/v1.0/reference#vod-manifests">docs.zype.com/v1.0/ref
       
         
         <div class='inline'>
-<p>0.9.0</p>
+<p>0.10.0</p>
 </div>
       
     </li>
@@ -291,10 +302,10 @@ href="https://docs.zype.com/v1.0/reference#vod-manifests">docs.zype.com/v1.0/ref
 20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/zype/models/manifests.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/zype/models/players.rb', line 18</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='label'>id:</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:get</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/manifest/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'>.m3u8</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='label'>id:</span><span class='comma'>,</span> <span class='label'>format:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:get</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_format'>format</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
