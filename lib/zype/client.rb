@@ -20,7 +20,7 @@ module Zype
 
     # Automatically converts all files in lib/zype/models to be used as methods
     class << self
-      Dir["lib/zype/models/*"].each do |file|
+      Dir["lib/zype/models/*.rb"].each do |file|
         model = file[/.*\/(.*?).rb$/, 1]
         define_method model do
           constant = model.split("_").map { |s| s.capitalize }.join("")
