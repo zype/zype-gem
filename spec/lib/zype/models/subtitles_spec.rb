@@ -72,4 +72,10 @@ describe Zype::Subtitles, :stubbed do
       client.subtitles.delete(id: '340234', video_id: '12345')
     end
   end
+
+  describe '#path' do
+    it 'returns subtitles' do
+      expect(client.subtitles.send(:path)).to eq('subtitles')
+    end
+  end
 end

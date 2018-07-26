@@ -5,21 +5,11 @@ module Zype
   # Read more at https://docs.zype.com/v1.0/reference#subtitle-playlists
   #
   # @since 0.7.0
-  class SubtitlePlaylists < Zype::BaseModel
+  class SubtitlePlaylists < Zype::Base::Videos
     %i[all find update].each do |mtd|
       send(:define_method, mtd) do
         raise NoMethodError
       end
-    end
-
-    # Creates a new subtitle via the API.
-    # Files must be hosted and be accessible with a URL
-    #
-    # @param video_id [String] ID of the video to assign to the subtitle
-    # @param params [Hash] the properties of the subtitle
-    # @return [Hash] the newly created subtitle
-    def create(video_id:, params:)
-      client.execute(method: :post, path: "/videos/#{video_id}/subtitle_playlists", params: params)
     end
 
     # Deletes an existing subtitle via the API
