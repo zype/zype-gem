@@ -17,6 +17,8 @@ lib/zype/models/categories.rb 8fe20bc73917d9f9ee8395273a66e54ff5c065c9
 lib/zype/models/base/videos.rb 029305d5f606b9732783023fa66a93c67a858ec0
 lib/zype/models/live_events.rb a5fb26ba666b24fe2dae535b1ea6679ad217f7f8
 lib/zype/client/player_client.rb 738248e2eee1423781d284799b1a9b62f8d4f271
+lib/zype/models/video_imports.rb 18a777bdaecfc9aef50e3bdcb6353ff3244cefac
+lib/zype/models/video_sources.rb 0e39073d31fe01d3b3272ea564890aa763a5de7a
 lib/zype/models/live_manifests.rb 2dc7c35042b6e65a4ff06df4db93013d53d98298
 lib/zype/models/program_guides.rb cad06befd0febacc39f5528edb9e616a67dc54f5
 lib/zype/models/device_categories.rb d072b906c0d66e8c3b66e40cccc1ce0844c92e18
