@@ -48,7 +48,7 @@ describe Zype::Videos, :stubbed do
   describe '#update' do
     before { stub_method(method: :put) }
 
-    it 'calls Zype::Videos#find' do
+    it 'calls Zype::Videos#update' do
       expect_any_instance_of(Zype::Videos).to receive(:update)
       client.videos.update(id: '340234', params: {})
     end
