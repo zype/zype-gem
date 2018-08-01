@@ -30,7 +30,7 @@ module Zype
 
       # Updates an existing object via the API
       #
-      # @param id [String] the ID of the object
+      # @param video_id [String] the ID of the video
       # @param params [Hash] the properties to be updated
       # @return [Hash] the updated object
       def update(video_id:, id:, params:)

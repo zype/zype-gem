@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: Zype::Base::Videos
+  Class: Zype::Base::Playlists
   
     &mdash; Documentation by YARD 0.9.14
   
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  pathId = "Zype::Base::Videos";
+  pathId = "Zype::Base::Playlists";
   relpath = '../../';
 </script>
 
@@ -36,10 +36,10 @@
       <div id="header">
         <div id="menu">
   
-    <a href="../../_index.html">Index (V)</a> &raquo;
+    <a href="../../_index.html">Index (P)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Zype.html" title="Zype (module)">Zype</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Base.html" title="Zype::Base (module)">Base</a></span></span>
      &raquo; 
-    <span class="title">Videos</span>
+    <span class="title">Playlists</span>
   
 </div>
 
@@ -59,7 +59,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Class: Zype::Base::Videos
+      <div id="content"><h1>Class: Zype::Base::Playlists
   
   
   
@@ -76,7 +76,7 @@
           
             <li class="next"><span class='object_link'><a href="../BaseModel.html" title="Zype::BaseModel (class)">Zype::BaseModel</a></span></li>
           
-            <li class="next">Zype::Base::Videos</li>
+            <li class="next">Zype::Base::Playlists</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/zype/models/base/videos.rb</dd>
+    <dd>lib/zype/models/base/playlists.rb</dd>
   </dl>
   
 </div>
@@ -104,7 +104,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>Any videos nested routes will inherit from this class</p>
+<p>Any playlist nested routes will inherit from this class</p>
 
 
   </div>
@@ -114,7 +114,7 @@
 
 </div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="../Segments.html" title="Zype::Segments (class)">Segments</a></span>, <span class='object_link'><a href="../SubtitlePlaylists.html" title="Zype::SubtitlePlaylists (class)">SubtitlePlaylists</a></span>, <span class='object_link'><a href="../VideoContentRules.html" title="Zype::VideoContentRules (class)">VideoContentRules</a></span></p>
+  <p class="children"><span class='object_link'><a href="../PlaylistContentRules.html" title="Zype::PlaylistContentRules (class)">PlaylistContentRules</a></span></p>
 </div>
 
 
@@ -145,7 +145,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#all-instance_method" title="#all (instance method)">#<strong>all</strong>(video_id:)  &#x21d2; Array&lt;Hash&gt; </a>
+      <a href="#all-instance_method" title="#all (instance method)">#<strong>all</strong>(playlist_id:)  &#x21d2; Array&lt;Hash&gt; </a>
     
 
     
@@ -169,7 +169,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#create-instance_method" title="#create (instance method)">#<strong>create</strong>(video_id:, params:)  &#x21d2; Hash </a>
+      <a href="#create-instance_method" title="#create (instance method)">#<strong>create</strong>(playlist_id:, params:)  &#x21d2; Hash </a>
     
 
     
@@ -193,7 +193,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong>(video_id:, id:)  &#x21d2; Hash </a>
+      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong>(playlist_id:, id:)  &#x21d2; Hash </a>
     
 
     
@@ -217,7 +217,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#find-instance_method" title="#find (instance method)">#<strong>find</strong>(video_id:, id:)  &#x21d2; Hash </a>
+      <a href="#find-instance_method" title="#find (instance method)">#<strong>find</strong>(playlist_id:, id:)  &#x21d2; Hash </a>
     
 
     
@@ -241,7 +241,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#update-instance_method" title="#update (instance method)">#<strong>update</strong>(video_id:, id:, params:)  &#x21d2; Hash </a>
+      <a href="#update-instance_method" title="#update (instance method)">#<strong>update</strong>(playlist_id:, id:, params:)  &#x21d2; Hash </a>
     
 
     
@@ -291,7 +291,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="all-instance_method">
   
-    #<strong>all</strong>(video_id:)  &#x21d2; <tt>Array&lt;Hash&gt;</tt> 
+    #<strong>all</strong>(playlist_id:)  &#x21d2; <tt>Array&lt;Hash&gt;</tt> 
   
 
   
@@ -311,7 +311,7 @@
   
     <li>
       
-        <span class='name'>video_id</span>
+        <span class='name'>playlist_id</span>
       
       
         <span class='type'>(<tt>String</tt>)</span>
@@ -320,7 +320,7 @@
       
         &mdash;
         <div class='inline'>
-<p>the ID of the video</p>
+<p>the ID of the playlist</p>
 </div>
       
     </li>
@@ -357,10 +357,10 @@
 11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/zype/models/base/videos.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/zype/models/base/playlists.rb', line 9</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_all'>all</span><span class='lparen'>(</span><span class='label'>video_id:</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:get</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/videos/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_video_id'>video_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_all'>all</span><span class='lparen'>(</span><span class='label'>playlist_id:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:get</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/playlists/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_playlist_id'>playlist_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -370,7 +370,7 @@
       <div class="method_details ">
   <h3 class="signature " id="create-instance_method">
   
-    #<strong>create</strong>(video_id:, params:)  &#x21d2; <tt>Hash</tt> 
+    #<strong>create</strong>(playlist_id:, params:)  &#x21d2; <tt>Hash</tt> 
   
 
   
@@ -390,7 +390,7 @@
   
     <li>
       
-        <span class='name'>video_id</span>
+        <span class='name'>playlist_id</span>
       
       
         <span class='type'>(<tt>String</tt>)</span>
@@ -399,7 +399,7 @@
       
         &mdash;
         <div class='inline'>
-<p>ID of the video to assign to the object</p>
+<p>ID of the playlist to assign to the object</p>
 </div>
       
     </li>
@@ -452,10 +452,10 @@
 29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/zype/models/base/videos.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/zype/models/base/playlists.rb', line 27</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='label'>video_id:</span><span class='comma'>,</span> <span class='label'>params:</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:post</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/videos/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_video_id'>video_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>params:</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='label'>playlist_id:</span><span class='comma'>,</span> <span class='label'>params:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:post</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/playlists/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_playlist_id'>playlist_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>params:</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -465,7 +465,7 @@
       <div class="method_details ">
   <h3 class="signature " id="delete-instance_method">
   
-    #<strong>delete</strong>(video_id:, id:)  &#x21d2; <tt>Hash</tt> 
+    #<strong>delete</strong>(playlist_id:, id:)  &#x21d2; <tt>Hash</tt> 
   
 
   
@@ -485,7 +485,7 @@
   
     <li>
       
-        <span class='name'>video_id</span>
+        <span class='name'>playlist_id</span>
       
       
         <span class='type'>(<tt>String</tt>)</span>
@@ -494,7 +494,7 @@
       
         &mdash;
         <div class='inline'>
-<p>the ID of the video</p>
+<p>the ID of the playlist</p>
 </div>
       
     </li>
@@ -547,10 +547,10 @@
 47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/zype/models/base/videos.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'lib/zype/models/base/playlists.rb', line 45</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='label'>video_id:</span><span class='comma'>,</span> <span class='label'>id:</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:delete</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/videos/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_video_id'>video_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='label'>playlist_id:</span><span class='comma'>,</span> <span class='label'>id:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:delete</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/playlists/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_playlist_id'>playlist_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -560,7 +560,7 @@
       <div class="method_details ">
   <h3 class="signature " id="find-instance_method">
   
-    #<strong>find</strong>(video_id:, id:)  &#x21d2; <tt>Hash</tt> 
+    #<strong>find</strong>(playlist_id:, id:)  &#x21d2; <tt>Hash</tt> 
   
 
   
@@ -580,7 +580,7 @@
   
     <li>
       
-        <span class='name'>video_id</span>
+        <span class='name'>playlist_id</span>
       
       
         <span class='type'>(<tt>String</tt>)</span>
@@ -589,7 +589,7 @@
       
         &mdash;
         <div class='inline'>
-<p>the ID of the video</p>
+<p>the ID of the playlist</p>
 </div>
       
     </li>
@@ -642,10 +642,10 @@
 20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/zype/models/base/videos.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/zype/models/base/playlists.rb', line 18</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='label'>video_id:</span><span class='comma'>,</span> <span class='label'>id:</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:get</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/videos/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_video_id'>video_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='label'>playlist_id:</span><span class='comma'>,</span> <span class='label'>id:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:get</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/playlists/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_playlist_id'>playlist_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -655,7 +655,7 @@
       <div class="method_details ">
   <h3 class="signature " id="update-instance_method">
   
-    #<strong>update</strong>(video_id:, id:, params:)  &#x21d2; <tt>Hash</tt> 
+    #<strong>update</strong>(playlist_id:, id:, params:)  &#x21d2; <tt>Hash</tt> 
   
 
   
@@ -675,7 +675,7 @@
   
     <li>
       
-        <span class='name'>video_id</span>
+        <span class='name'>playlist_id</span>
       
       
         <span class='type'>(<tt>String</tt>)</span>
@@ -684,7 +684,7 @@
       
         &mdash;
         <div class='inline'>
-<p>the ID of the video</p>
+<p>the ID of the playlist</p>
 </div>
       
     </li>
@@ -737,10 +737,10 @@
 38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/zype/models/base/videos.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/zype/models/base/playlists.rb', line 36</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='label'>video_id:</span><span class='comma'>,</span> <span class='label'>id:</span><span class='comma'>,</span> <span class='label'>params:</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:put</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/videos/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_video_id'>video_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>params:</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='label'>playlist_id:</span><span class='comma'>,</span> <span class='label'>id:</span><span class='comma'>,</span> <span class='label'>params:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:put</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/playlists/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_playlist_id'>playlist_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>params:</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
