@@ -1,6 +1,7 @@
 lib/zype.rb fb9758ecc74cdb38351f6fbbcdc0129b4ca21a48
 lib/zype/client.rb ae7f9f7982441bef1a67974245c3d1df86732fda
 lib/zype/base_model.rb 5dfdb9de0ce869890245893d374994f33d8eae57
+lib/zype/models/pin.rb 40e1f96210b477b28a230dbb5fdf8f1a462fa412
 lib/zype/models/apps.rb c0b30fb9df9354070045879155b08741253a2500
 lib/zype/models/users.rb 615c46ea0b69316ec47b5ba611b45362f898e1ca
 lib/zype/configuration.rb ca1ff9ab04cb478d2307bae96e627ffb9a0586ce
@@ -10,6 +11,7 @@ lib/zype/models/devices.rb 298d865dc315857ab621571d99a055189908ef72
 lib/zype/models/players.rb e5dddcd52aaca69d7998e8c018389d17cf014f0e
 lib/zype/models/encoders.rb 9528158f691e740bfddac7d2b8df8da289a9d811
 lib/zype/models/segments.rb 1b5bb9fc410a037bdd64768d9e486f45451f82bc
+lib/zype/models/consumers.rb 6735af7399a456efb9ecd1b62cfe21d1f9bfa7d3
 lib/zype/models/manifests.rb dd6c5f070c5eab33c1d82714db368491e5422516
 lib/zype/models/playlists.rb c9fd35abc44785ce0a207c4ea6598098e42265a8
 lib/zype/models/subtitles.rb 26df081ad100c5edb29ab85aa469d80178ccdc9f
@@ -20,12 +22,15 @@ lib/zype/models/live_events.rb a5fb26ba666b24fe2dae535b1ea6679ad217f7f8
 lib/zype/client/player_client.rb 738248e2eee1423781d284799b1a9b62f8d4f271
 lib/zype/models/video_imports.rb 18a777bdaecfc9aef50e3bdcb6353ff3244cefac
 lib/zype/models/video_sources.rb 0e39073d31fe01d3b3272ea564890aa763a5de7a
+lib/zype/models/base/consumers.rb 5516ce61a42ce3075a0932fd9f18b5606948ea32
 lib/zype/models/base/playlists.rb 529ce6735c72b76e9d61a35368b696656e777135
 lib/zype/models/live_manifests.rb 2dc7c35042b6e65a4ff06df4db93013d53d98298
 lib/zype/models/program_guides.rb cad06befd0febacc39f5528edb9e616a67dc54f5
 lib/zype/models/base/categories.rb de62263dac84860942090144fd6ca3ac22e16ba8
 lib/zype/models/device_categories.rb d072b906c0d66e8c3b66e40cccc1ce0844c92e18
 lib/zype/models/subtitle_playlists.rb 55e14f287e3ae85a493af1d8bf544a0a7e6e916e
+lib/zype/models/video_entitlements.rb 6f6031b01f89248061cfd813b59d84c22308deaf
 lib/zype/models/video_content_rules.rb 6813fad55169e91dcbb2fbad41feeed2e25f9e1b
+lib/zype/models/playlist_entitlements.rb a435b65f5bc4a1b9f0c821e13b8773913c686f69
 lib/zype/models/category_content_rules.rb c220ad192f09de4c1f14230442caa1572678494f
 lib/zype/models/playlist_content_rules.rb 9f3580611158c9f77c0acc2b5c1d3fce9ac51329

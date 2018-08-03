@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: Zype::SubtitlePlaylists
+  Class: Zype::Consumers
   
     &mdash; Documentation by YARD 0.9.14
   
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  pathId = "Zype::SubtitlePlaylists";
+  pathId = "Zype::Consumers";
   relpath = '../';
 </script>
 
@@ -36,10 +36,10 @@
       <div id="header">
         <div id="menu">
   
-    <a href="../_index.html">Index (S)</a> &raquo;
+    <a href="../_index.html">Index (C)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Zype.html" title="Zype (module)">Zype</a></span></span>
      &raquo; 
-    <span class="title">SubtitlePlaylists</span>
+    <span class="title">Consumers</span>
   
 </div>
 
@@ -59,7 +59,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Class: Zype::SubtitlePlaylists
+      <div id="content"><h1>Class: Zype::Consumers
   
   
   
@@ -69,16 +69,14 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="Base/Videos.html" title="Zype::Base::Videos (class)">Base::Videos</a></span></span>
+      <span class="inheritName"><span class='object_link'><a href="BaseModel.html" title="Zype::BaseModel (class)">BaseModel</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
           
             <li class="next"><span class='object_link'><a href="BaseModel.html" title="Zype::BaseModel (class)">BaseModel</a></span></li>
           
-            <li class="next"><span class='object_link'><a href="Base/Videos.html" title="Zype::Base::Videos (class)">Base::Videos</a></span></li>
-          
-            <li class="next">Zype::SubtitlePlaylists</li>
+            <li class="next">Zype::Consumers</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -98,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/zype/models/subtitle_playlists.rb</dd>
+    <dd>lib/zype/models/consumers.rb</dd>
   </dl>
   
 </div>
@@ -106,12 +104,8 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>The Subtitle Playlists API allows users to integrate subtitles with HLS
-manifests from a Zype video source. It’s a simple way to add subtitles
-which will be supported in all platforms that implement the Apple HLS
-specification. This class does not support all, find and update methods.
-Read more at <a
-href="https://docs.zype.com/v1.0/reference#subtitle-playlists">docs.zype.com/v1.0/reference#subtitle-playlists</a></p>
+<p>Read more at <a
+href="https://docs.zype.com/v1.0/reference#consumers">docs.zype.com/v1.0/reference#consumers</a></p>
 
 
   </div>
@@ -128,7 +122,7 @@ href="https://docs.zype.com/v1.0/reference#subtitle-playlists">docs.zype.com/v1.
       
         
         <div class='inline'>
-<p>0.7.0</p>
+<p>0.15.0</p>
 </div>
       
     </li>
@@ -164,7 +158,7 @@ href="https://docs.zype.com/v1.0/reference#subtitle-playlists">docs.zype.com/v1.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong>(language:, video_id:)  &#x21d2; Hash </a>
+      <a href="#forgot_password-instance_method" title="#forgot_password (instance method)">#<strong>forgot_password</strong>(email:)  &#x21d2; Hash </a>
     
 
     
@@ -179,7 +173,7 @@ href="https://docs.zype.com/v1.0/reference#subtitle-playlists">docs.zype.com/v1.
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Deletes an existing subtitle via the API.</p>
+<p>Initiate consumer forgot password flow.</p>
 </div></span>
   
 </li>
@@ -197,19 +191,8 @@ href="https://docs.zype.com/v1.0/reference#subtitle-playlists">docs.zype.com/v1.
   
   
   
-  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Base/Videos.html" title="Zype::Base::Videos (class)">Base::Videos</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Base/Videos.html#all-instance_method" title="Zype::Base::Videos#all (method)">#all</a></span>, <span class='object_link'><a href="Base/Videos.html#create-instance_method" title="Zype::Base::Videos#create (method)">#create</a></span>, <span class='object_link'><a href="Base/Videos.html#find-instance_method" title="Zype::Base::Videos#find (method)">#find</a></span>, <span class='object_link'><a href="Base/Videos.html#update-instance_method" title="Zype::Base::Videos#update (method)">#update</a></span></p>
-
-  
-  
-  
-  
-  
-  
-  
-  
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="BaseModel.html" title="Zype::BaseModel (class)">BaseModel</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="BaseModel.html#all-instance_method" title="Zype::BaseModel#all (method)">#all</a></span>, <span class='object_link'><a href="BaseModel.html#auth=-instance_method" title="Zype::BaseModel#auth= (method)">#auth=</a></span>, <span class='object_link'><a href="BaseModel.html#create-instance_method" title="Zype::BaseModel#create (method)">#create</a></span>, <span class='object_link'><a href="BaseModel.html#find-instance_method" title="Zype::BaseModel#find (method)">#find</a></span>, <span class='object_link'><a href="BaseModel.html#initialize-instance_method" title="Zype::BaseModel#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="BaseModel.html#update-instance_method" title="Zype::BaseModel#update (method)">#update</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="BaseModel.html#all-instance_method" title="Zype::BaseModel#all (method)">#all</a></span>, <span class='object_link'><a href="BaseModel.html#auth=-instance_method" title="Zype::BaseModel#auth= (method)">#auth=</a></span>, <span class='object_link'><a href="BaseModel.html#create-instance_method" title="Zype::BaseModel#create (method)">#create</a></span>, <span class='object_link'><a href="BaseModel.html#delete-instance_method" title="Zype::BaseModel#delete (method)">#delete</a></span>, <span class='object_link'><a href="BaseModel.html#find-instance_method" title="Zype::BaseModel#find (method)">#find</a></span>, <span class='object_link'><a href="BaseModel.html#initialize-instance_method" title="Zype::BaseModel#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="BaseModel.html#update-instance_method" title="Zype::BaseModel#update (method)">#update</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -223,9 +206,9 @@ href="https://docs.zype.com/v1.0/reference#subtitle-playlists">docs.zype.com/v1.
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="delete-instance_method">
+  <h3 class="signature first" id="forgot_password-instance_method">
   
-    #<strong>delete</strong>(language:, video_id:)  &#x21d2; <tt>Hash</tt> 
+    #<strong>forgot_password</strong>(email:)  &#x21d2; <tt>Hash</tt> 
   
 
   
@@ -234,7 +217,8 @@ href="https://docs.zype.com/v1.0/reference#subtitle-playlists">docs.zype.com/v1.
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Deletes an existing subtitle via the API</p>
+<p>Initiate consumer forgot password flow. Consumer will receive forgot
+password email.</p>
 
 
   </div>
@@ -245,7 +229,7 @@ href="https://docs.zype.com/v1.0/reference#subtitle-playlists">docs.zype.com/v1.
   
     <li>
       
-        <span class='name'>language</span>
+        <span class='name'>email</span>
       
       
         <span class='type'>(<tt>String</tt>)</span>
@@ -254,23 +238,7 @@ href="https://docs.zype.com/v1.0/reference#subtitle-playlists">docs.zype.com/v1.
       
         &mdash;
         <div class='inline'>
-<p>language of the playlist - must be full name - not code</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>video_id</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>ID of the video the subtitle belongs to</p>
+<p>email of the consumer</p>
 </div>
       
     </li>
@@ -289,7 +257,7 @@ href="https://docs.zype.com/v1.0/reference#subtitle-playlists">docs.zype.com/v1.
       
         &mdash;
         <div class='inline'>
-<p>the deleted subtitle</p>
+<p>the consumer returned from the API</p>
 </div>
       
     </li>
@@ -305,7 +273,7 @@ href="https://docs.zype.com/v1.0/reference#subtitle-playlists">docs.zype.com/v1.
       
         
         <div class='inline'>
-<p>0.7.0</p>
+<p>0.15.0</p>
 </div>
       
     </li>
@@ -318,15 +286,15 @@ href="https://docs.zype.com/v1.0/reference#subtitle-playlists">docs.zype.com/v1.
       <pre class="lines">
 
 
-20
-21
-22</pre>
+11
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/zype/models/subtitle_playlists.rb', line 20</span>
+      <pre class="code"><span class="info file"># File 'lib/zype/models/consumers.rb', line 11</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='label'>language:</span><span class='comma'>,</span> <span class='label'>video_id:</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:delete</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/videos/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_video_id'>video_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/subtitle_playlists/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_forgot_password'>forgot_password</span><span class='lparen'>(</span><span class='label'>email:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:put</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'>/forgot_password</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>params:</span> <span class='lbrace'>{</span> <span class='label'>email:</span> <span class='id identifier rubyid_email'>email</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -338,7 +306,7 @@ href="https://docs.zype.com/v1.0/reference#subtitle-playlists">docs.zype.com/v1.
 </div>
 
       <div id="footer">
-  Generated on Fri Aug  3 10:51:52 2018 by
+  Generated on Fri Aug  3 10:51:51 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.14 (ruby-2.5.0).
 </div>
