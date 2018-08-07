@@ -1,9 +1,11 @@
 require 'httparty'
-require './lib/zype/configuration.rb'
-require './lib/zype/client.rb'
-require './lib/zype/client/player_client.rb'
-require './lib/zype/client/api_client.rb'
-require './lib/zype/base_model.rb'
+require 'zype/configuration.rb'
+require 'zype/models.rb'
+require 'zype/client.rb'
+require 'zype/client/player_client.rb'
+require 'zype/client/api_client.rb'
+require 'zype/base_model.rb'
+
 Dir[File.join(__dir__, '../lib/zype/models/base', '*.rb')].each { |file| require file }
 Dir[File.join(__dir__, '../lib/zype/models', '*.rb')].each { |file| require file }
 

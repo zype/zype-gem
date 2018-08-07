@@ -18,31 +18,30 @@ module Zype
       500 => ServerError
     }.freeze
 
-    # Automatically converts all files in lib/zype/models to be used as methods
+    # Converts all files in lib/zype/models to be used as methods
     class << self
-      Dir["lib/zype/models/*.rb"].each do |file|
-        model = file[/.*\/(.*?).rb$/, 1]
+      Models::LIST.each do |model|
         define_method model do
-          constant = model.split("_").map { |s| s.capitalize }.join("")
+          constant = model.split('_').map(&:capitalize).join('')
           Module.const_get("Zype::#{constant}").new
         end
       end
     end
 
     def get(path:, params: {})
-      self.class.get(path, { query: params, headers: headers })
+      self.class.get(path, query: params, headers: headers)
     end
 
     def post(path:, params: {})
-      self.class.post(path, { query: params, headers: headers })
+      self.class.post(path, query: params, headers: headers)
     end
 
     def put(path:, params: {})
-      self.class.put(path, { query: params, headers: headers })
+      self.class.put(path, query: params, headers: headers)
     end
 
     def delete(path:, params: _)
-      self.class.delete(path, { headers: headers })
+      self.class.delete(path, headers: headers)
     end
 
     def execute(method:, path:, params: {})
@@ -50,7 +49,7 @@ module Zype
         raise NoApiKey if Zype.configuration.app_key.to_s.empty?
       end
 
-      resp = self.send(method, path: path, params: params)
+      resp = send(method, path: path, params: params)
       if resp.success?
         resp['response'].nil? ? resp.parsed_response : resp['response']
       else
