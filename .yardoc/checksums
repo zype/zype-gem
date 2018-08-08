@@ -1,5 +1,6 @@
-lib/zype.rb fb9758ecc74cdb38351f6fbbcdc0129b4ca21a48
-lib/zype/client.rb ae7f9f7982441bef1a67974245c3d1df86732fda
+lib/zype.rb b5008b01ed22d5efc8cd571b432823c97e619921
+lib/zype/client.rb 0a846d79aef01a2540aac440c275890e62a450e3
+lib/zype/models.rb 617b26d6527144b3b665dd56526194d45a0b3c5b
 lib/zype/base_model.rb 5dfdb9de0ce869890245893d374994f33d8eae57
 lib/zype/models/pin.rb 40e1f96210b477b28a230dbb5fdf8f1a462fa412
 lib/zype/models/apps.rb c0b30fb9df9354070045879155b08741253a2500
@@ -8,6 +9,7 @@ lib/zype/models/users.rb 615c46ea0b69316ec47b5ba611b45362f898e1ca
 lib/zype/configuration.rb ca1ff9ab04cb478d2307bae96e627ffb9a0586ce
 lib/zype/models/geo_ip.rb e1008c53eac8dd247415d2190c5d1bc5d8c61526
 lib/zype/models/videos.rb 75c6eb97b0e310e7c4c5dfeda457786314e64189
+lib/zype/models/ad_tags.rb 2bb70f013999cc66e655bd18fb3d44589ece798b
 lib/zype/models/devices.rb 298d865dc315857ab621571d99a055189908ef72
 lib/zype/models/players.rb e5dddcd52aaca69d7998e8c018389d17cf014f0e
 lib/zype/models/encoders.rb 9528158f691e740bfddac7d2b8df8da289a9d811
@@ -29,7 +31,10 @@ lib/zype/models/base/consumers.rb 5516ce61a42ce3075a0932fd9f18b5606948ea32
 lib/zype/models/base/playlists.rb 529ce6735c72b76e9d61a35368b696656e777135
 lib/zype/models/live_manifests.rb 2dc7c35042b6e65a4ff06df4db93013d53d98298
 lib/zype/models/program_guides.rb cad06befd0febacc39f5528edb9e616a67dc54f5
+lib/zype/models/revenue_models.rb b90b3ddad76a93eef935740e2f2aba012e6db975
 lib/zype/models/base/categories.rb de62263dac84860942090144fd6ca3ac22e16ba8
+lib/zype/models/video_favorites.rb 8a57415104a51633c452dcd82a1dfbfc8b2dcd56
+lib/zype/models/redemption_codes.rb ba606036c81ca578b2bce150e72ac066679419de
 lib/zype/models/device_categories.rb d072b906c0d66e8c3b66e40cccc1ce0844c92e18
 lib/zype/models/subtitle_playlists.rb 55e14f287e3ae85a493af1d8bf544a0a7e6e916e
 lib/zype/models/video_entitlements.rb 6f6031b01f89248061cfd813b59d84c22308deaf
