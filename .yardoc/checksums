@@ -1,12 +1,13 @@
-lib/zype.rb b5008b01ed22d5efc8cd571b432823c97e619921
+lib/zype.rb 622703722c3004b54868741618875292c46107b9
 lib/zype/client.rb 0a846d79aef01a2540aac440c275890e62a450e3
-lib/zype/models.rb af2d6e320810b76662f4f743fc0c00d725090f63
+lib/zype/models.rb b799221f31fa27cb1459a4c0a9b58a671a891a44
 lib/zype/base_model.rb 5dfdb9de0ce869890245893d374994f33d8eae57
 lib/zype/models/pin.rb 40e1f96210b477b28a230dbb5fdf8f1a462fa412
 lib/zype/models/apps.rb c0b30fb9df9354070045879155b08741253a2500
+lib/zype/models/oauth.rb a0c115e4b452476ea2838eeef797e6eacfacd3f8
 lib/zype/models/plans.rb 888a83c5bd54988e954b15e7df341db88ebd504d
 lib/zype/models/users.rb 615c46ea0b69316ec47b5ba611b45362f898e1ca
-lib/zype/configuration.rb ca1ff9ab04cb478d2307bae96e627ffb9a0586ce
+lib/zype/configuration.rb 8967762c860e8b929b2c44c29248395c4ba6d185
 lib/zype/models/geo_ip.rb e1008c53eac8dd247415d2190c5d1bc5d8c61526
 lib/zype/models/videos.rb 75c6eb97b0e310e7c4c5dfeda457786314e64189
 lib/zype/models/ad_tags.rb 2bb70f013999cc66e655bd18fb3d44589ece798b
@@ -23,6 +24,7 @@ lib/zype/client/api_client.rb 270521a8edde98cdcb846616667f2625966a2fe0
 lib/zype/models/categories.rb 8fe20bc73917d9f9ee8395273a66e54ff5c065c9
 lib/zype/models/base/videos.rb a8229bfd653c4b60328f89b4d1cacfe1523b6e2a
 lib/zype/models/live_events.rb a5fb26ba666b24fe2dae535b1ea6679ad217f7f8
+lib/zype/client/login_client.rb 0856147246337e08ca093c65fc1589a4844d012a
 lib/zype/models/transactions.rb fa1f10dc9161285693932d7a59b71c4b53a5caeb
 lib/zype/client/player_client.rb 738248e2eee1423781d284799b1a9b62f8d4f271
 lib/zype/models/subscriptions.rb efac02a1c3741767f860d6e058165181c1f32e2d
