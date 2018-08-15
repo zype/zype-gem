@@ -4,6 +4,7 @@ require 'zype/models.rb'
 require 'zype/client.rb'
 require 'zype/client/player_client.rb'
 require 'zype/client/api_client.rb'
+require 'zype/client/login_client.rb'
 require 'zype/base_model.rb'
 
 Dir[File.join(__dir__, '../lib/zype/models/base', '*.rb')].each { |file| require file }
