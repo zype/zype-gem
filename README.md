@@ -89,3 +89,7 @@ gem build zype.gemspec
 gem push zype-0.1.0.gem
 # Enter email and password in provided prompts
 ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
